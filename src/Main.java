@@ -26,7 +26,7 @@ public class Main {
       }
 
       if (!isExist) {
-        System.out.println(String.format("Команда не поддерживается", commandStr));
+        System.out.println(String.format("Команда $s не поддерживается", commandStr));
         continue;
       }
 
@@ -38,12 +38,12 @@ public class Main {
 
           AnimalFactory animalFactory = new AnimalFactory();
 
-          String animalStr = scanner.next().trim().toLowerCase(Locale.ROOT);
+          String animalStr = scanner.next().trim().toUpperCase(Locale.ROOT);
           Animal animal = animalFactory.create(animalStr);
 
           while (animal == null) {
             System.out.println("Вы ввели неверный тип животного");
-            animalStr = scanner.next().trim().toLowerCase(Locale.ROOT);
+            animalStr = scanner.next().trim().toUpperCase(Locale.ROOT);
             animal = animalFactory.create(animalStr);
           }
           animals.add(fillAnimalData(animal));

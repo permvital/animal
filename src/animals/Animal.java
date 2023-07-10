@@ -41,7 +41,7 @@ public abstract class Animal {
   @Override
   public String toString() {
     return String.format("Привет! меня зовут %s, мне %d %s лет, я вешу - %d кг, мой цвет - %s",
-        getName(), getAge(), getWeight(), getColor());
+        getName(), getAge(), getYearPadej(), getWeight(), getColor());
   }
 
   private String getYearPadej() {
