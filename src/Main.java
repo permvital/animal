@@ -71,11 +71,28 @@ public class Main {
     System.out.println("Введите цвет животного");
     animal.setColor(scanner.next());
 
-    System.out.println("Введите возраст животного");
-    animal.setAge(Integer.parseInt(scanner.next()));
+    String cheackAge;
+    do{
+      System.out.println("Введите возраст животного");
+      cheackAge = scanner.next();
+//      if (cheackAge.length() <= 2 && cheackAge.matches("\\d+")) {
+      if (cheackAge.matches("\\d+")) {
+        if (Integer.parseInt(cheackAge) > 0 && Integer.parseInt(cheackAge) < 40)
+          break;
+      }
+    } while (true);
+    animal.setAge(Integer.parseInt(cheackAge));
 
-    System.out.println("Введите вес животного");
-    animal.setWeight(Integer.parseInt(scanner.next()));
+    String weightStr;
+    do{
+      System.out.println("Введите вес животного");
+      weightStr = scanner.next();
+      if (weightStr.matches("\\d+")) {
+        if (Integer.parseInt(weightStr) > 0 && Integer.parseInt(weightStr) < 150)
+          break;
+      }
+    } while (true);
+
     return animal;
   }
 }
