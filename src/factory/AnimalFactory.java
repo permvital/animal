@@ -11,7 +11,7 @@ public class AnimalFactory {
   public Animal create(String animalType) {
 
     boolean isAnimalExist = false;
-    for (AnimalTypeData animalTypeData: AnimalTypeData.values()) {
+    for (AnimalTypeData animalTypeData : AnimalTypeData.values()) {
       if (animalTypeData.name().equals(animalType)) {
         isAnimalExist = true;
         break;

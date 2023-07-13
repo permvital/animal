@@ -72,10 +72,9 @@ public class Main {
     animal.setColor(scanner.next());
 
     String cheackAge;
-    do{
+    do {
       System.out.println("Введите возраст животного");
       cheackAge = scanner.next();
-//      if (cheackAge.length() <= 2 && cheackAge.matches("\\d+")) {
       if (cheackAge.matches("\\d+")) {
         if (Integer.parseInt(cheackAge) > 0 && Integer.parseInt(cheackAge) < 40)
           break;
@@ -83,12 +82,12 @@ public class Main {
     } while (true);
     animal.setAge(Integer.parseInt(cheackAge));
 
-    String weightStr;
-    do{
+    String checkWeight;
+    do {
       System.out.println("Введите вес животного");
-      weightStr = scanner.next();
-      if (weightStr.matches("\\d+")) {
-        if (Integer.parseInt(weightStr) > 0 && Integer.parseInt(weightStr) < 150)
+      checkWeight = scanner.next();
+      if (checkWeight.matches("\\d+")) {
+        if (Integer.parseInt(checkWeight) > 0 && Integer.parseInt(checkWeight) < 150)
           break;
       }
     } while (true);
