@@ -87,10 +87,11 @@ public class Main {
       System.out.println("Введите вес животного");
       checkWeight = scanner.next();
       if (checkWeight.matches("\\d+")) {
-        if (Integer.parseInt(checkWeight) > 0 && Integer.parseInt(checkWeight) < 150)
+        if (Integer.parseInt(checkWeight) > 0 && Integer.parseInt(checkWeight) < 200)
           break;
       }
     } while (true);
+    animal.setWeight(Integer.parseInt(cheackAge));
 
     return animal;
   }
